@@ -1,0 +1,52 @@
+Step 1: Setup
+Before running the code, ensure you have TensorFlow, NumPy, and Matplotlib installed. These libraries are essential for building, training, and visualizing the neural network model.
+
+Step 2: Import Libraries
+1. TensorFlow and Keras: Used for building and training the neural network.
+2. MNIST dataset: A part of Keras datasets.
+Sequential, Dense, Flatten: Keras components to build the neural network model.
+3. to_categorical: A utility to convert class vectors to binary class matrices.
+4. Matplotlib: Used for plotting graphs.
+
+Step 3: Load and Preprocess the Data
+1. Loading the dataset: The MNIST dataset is loaded, splitting into training and test sets.
+2. Normalization: Pixel values of the images are scaled to the range [0, 1] by dividing by 255.0. This helps in speeding up the training process.
+3. One-hot encoding: Labels are converted into a binary matrix format using to_categorical. For instance, a label '3' becomes [0, 0, 0, 1, 0, 0, 0, 0, 0, 0].
+4. Printing shapes: Displays the dimensions of the training and test datasets.
+
+Step 4: Build the Model
+1. Model architecture:
+       Flatten: Converts the 28x28 2D images into 1D vectors of size 784.
+       Dense layer with ReLU: Fully connected layer with 128 neurons and ReLU activation.
+       Dense layer with softmax: Output layer with 10 neurons (one for each class) and softmax activation to output probabilities.
+
+2. Compile the model:
+      Optimizer: Adam optimizer is used for adjusting weights.
+      Loss function: Categorical cross-entropy for measuring the error.
+      Metrics: Accuracy to evaluate the performance.
+
+3. Model summary: Prints the model architecture.
+
+Step 5: Train the Model
+1. Training the model:
+     x_train, y_train: Training data.
+     epochs=5: Number of times the entire dataset is passed through the network.
+     validation_data: Data used to validate the model during training.
+
+Step 6: Evaluate the Model
+      Evaluate the model: Measures the model's performance on the test dataset. 
+      test_loss, test_acc: Test loss and accuracy are printed.
+
+Step 7: Visualize Training History
+1. Plotting:
+      Accuracy: Training and validation accuracy over epochs.
+      Loss: Training and validation loss over epochs.
+2. plt.figure: Creates a new figure.
+3. plt.subplot: Creates subplots in a 1x2 grid.
+4. plt.plot: Plots the values.
+
+Step 8: Make Predictions
+1. predictions: Predicts the labels for the test dataset.
+2' plt.imshow: Displays images.
+3. plt.title: Shows predicted and true labels.
+4. argmax(): Returns the index of the maximum value (i.e., the predicted digit).

@@ -1,0 +1,2 @@
+Starting your deep learning journey with the MNIST dataset is a great choice! MNIST is a dataset of 28x28 grayscale images of handwritten digits (0-9), which is widely used for training and testing in the field of machine learning. Here's a step-by-step guide to get you started with building a handwritten digit classifier using a simple neural network in Python with TensorFlow and Keras.
+
